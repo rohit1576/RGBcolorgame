@@ -24,7 +24,7 @@ function setupModeButtons(){
 			modeButtons[1].classList.remove("selected");
 			this.classList.add("selected");
 			this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
-			reset();
+			
 		});
 	}
 }
@@ -41,6 +41,9 @@ function setupSquares(){
 				resetButton.textContent = "Play Again?"
 				changeColors(clickedColor);
 				h1.style.background = clickedColor;
+				
+				setTimeout(reset,3000);
+
 			} else {
 				this.style.background = "#232323";
 				messageDisplay.textContent = "Try Again"
